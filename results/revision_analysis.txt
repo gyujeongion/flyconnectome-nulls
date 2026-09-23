@@ -1,0 +1,38 @@
+=== (a) sustained crossing: first probe after which the control stays >= connectome at every later probe ===
+ P0T0: N1 sustained 9/10, median gen 300 | N2 sustained 8/10, median gen 275 | N3 sustained 3/10, median gen 200
+ P1T0: N1 sustained 8/10, median gen 200 | N2 sustained 10/10, median gen 225 | N3 sustained 3/10, median gen 450
+ P0T1: N1 sustained 10/10, median gen 325 | N2 sustained 8/10, median gen 450 | N3 sustained 2/10, median gen 375
+ P1T1: N1 sustained 9/10, median gen 200 | N2 sustained 5/10, median gen 400 | N3 sustained 2/10, median gen 500
+
+=== (b) fitness components at the final probe (medians over seeds; top-16 common garden, intact) ===
+ P0T0 | A: fit 2.60 surv 0.89 good 54.4 bad 0.0 | N1: fit 2.97 surv 0.91 good 63.8 bad 0.0 | N2: fit 2.81 surv 0.89 good 59.6 bad 0.0 | N3: fit 2.00 surv 0.85 good 40.9 bad 0.0
+ P1T0 | A: fit 2.08 surv 0.74 good 43.1 bad 0.0 | N1: fit 2.52 surv 0.77 good 53.8 bad 0.0 | N2: fit 2.60 surv 0.77 good 55.4 bad 0.0 | N3: fit 1.24 surv 0.46 good 24.5 bad 0.0
+ P0T1 | A: fit 0.77 surv 0.41 good 24.7 bad 1.7 | N1: fit 0.96 surv 0.45 good 30.0 bad 2.0 | N2: fit 0.91 surv 0.42 good 29.0 bad 1.9 | N3: fit 0.61 surv 0.40 good 15.5 bad 1.0
+ P1T1 | A: fit 0.67 surv 0.32 good 21.8 bad 1.6 | N1: fit 0.81 surv 0.35 good 26.3 bad 1.7 | N2: fit 0.67 surv 0.34 good 22.0 bad 1.7 | N3: fit 0.42 surv 0.16 good 12.7 bad 0.9
+
+=== (c) absolute ablation costs at the final probe (intact - ablated, median over seeds) ===
+ P0T0 | A: smell +0.43 vision -0.09 plast +0.46 readouts +2.34 | N1: smell +1.25 vision +0.06 plast +0.54 readouts +2.84 | N2: smell +1.02 vision -0.19 plast +0.48 readouts +2.72 | N3: smell +1.02 vision -0.00 plast +0.60 readouts +1.76
+ P1T0 | A: smell -0.09 vision +0.49 plast +0.24 readouts +1.97 | N1: smell +1.01 vision +0.67 plast +0.49 readouts +2.44 | N2: smell +0.95 vision +0.56 plast +0.64 readouts +2.52 | N3: smell +0.69 vision +0.05 plast +0.11 readouts +1.14
+ P0T1 | A: smell +0.00 vision -0.08 plast +0.14 readouts +0.67 | N1: smell +0.38 vision -0.03 plast +0.30 readouts +0.84 | N2: smell +0.39 vision -0.01 plast +0.21 readouts +0.80 | N3: smell +0.30 vision +0.01 plast +0.03 readouts +0.47
+ P1T1 | A: smell -0.15 vision +0.27 plast +0.18 readouts +0.56 | N1: smell +0.14 vision +0.25 plast +0.27 readouts +0.73 | N2: smell +0.11 vision +0.16 plast +0.11 readouts +0.58 | N3: smell +0.09 vision +0.03 plast -0.00 readouts +0.26
+
+=== (d) population samples vs top-16: mean clone fitness of stored samples / top-16 probe fitness, gen 500 ===
+ A median ratio 0.976 [IQR 0.930-1.078] | N1 median ratio 0.931 [IQR 0.870-1.037] | N2 median ratio 0.983 [IQR 0.915-1.055] | N3 median ratio 0.873 [IQR 0.831-0.939]
+   A-N1 ratio diff median +0.042 p 0.1387
+   A-N2 ratio diff median -0.012 p 0.6463
+   A-N3 ratio diff median +0.089 p 0.0003
+=== CI and equivalence (post hoc): run-level A-null difference in P(beneficial), bootstrap 95% CI of the median; equivalence margin +-0.02 ===
+  gen 0 x0.5: A-N1 +0.0059 CI[-0.0078,+0.0195] within +-0.02 | A-N2 +0.0078 CI[-0.0059,+0.0273] NOT within +-0.02
+  gen 0 x1.0: A-N1 +0.0059 CI[-0.0156,+0.0215] NOT within +-0.02 | A-N2 -0.0117 CI[-0.0254,+0.0195] NOT within +-0.02
+  gen 0 x2.0: A-N1 +0.0000 CI[-0.0176,+0.0195] within +-0.02 | A-N2 +0.0000 CI[-0.0195,+0.0215] NOT within +-0.02
+  gen 250 x0.5: A-N1 -0.0039 CI[-0.0176,+0.0098] within +-0.02 | A-N2 -0.0039 CI[-0.0117,+0.0020] within +-0.02
+  gen 250 x1.0: A-N1 +0.0020 CI[-0.0156,+0.0098] within +-0.02 | A-N2 -0.0039 CI[-0.0117,+0.0039] within +-0.02
+  gen 250 x2.0: A-N1 +0.0000 CI[-0.0078,+0.0078] within +-0.02 | A-N2 +0.0039 CI[-0.0117,+0.0137] within +-0.02
+  gen 500 x0.5: A-N1 +0.0000 CI[-0.0176,+0.0098] within +-0.02 | A-N2 +0.0059 CI[-0.0059,+0.0195] within +-0.02
+  gen 500 x1.0: A-N1 -0.0078 CI[-0.0234,+0.0215] NOT within +-0.02 | A-N2 +0.0078 CI[-0.0078,+0.0215] NOT within +-0.02
+  gen 500 x2.0: A-N1 +0.0020 CI[-0.0020,+0.0137] within +-0.02 | A-N2 +0.0020 CI[-0.0039,+0.0195] within +-0.02
+
+=== median mutation effect (offspring cost), relative to parent, x1 ===
+  gen 0: A -0.217 N1 -0.168 N2 -0.168 N3 -0.168
+  gen 250: A -0.059 N1 -0.053 N2 -0.078 N3 -0.081
+  gen 500: A -0.065 N1 -0.054 N2 -0.062 N3 -0.068

@@ -1,0 +1,17 @@
+per condition, median over 10 seeds. direct = share of sensory output weight landing on descending neurons;
+hops = median shortest path sensory->DN; h1/h2/h3 = normalised input influence reaching DNs in 1/2/3 steps
+--- smell
+  A: direct 0.0001  hops 3.0  h1 0.0067  h2 0.1934  h3 0.3805
+  N1: direct 0.1070  hops 1.0  h1 7.3131  h2 6.0389  h3 4.2149
+  N2: direct 0.1064  hops 1.0  h1 7.0253  h2 5.3799  h3 3.9242
+  N3: direct 0.0631  hops 1.0  h1 5.8935  h2 6.2430  h3 4.3875
+--- vision
+  A: direct 0.3808  hops 2.0  h1 10.9228  h2 3.7856  h3 1.8942
+  N1: direct 0.1076  hops 2.0  h1 2.4483  h2 2.0188  h3 1.3676
+  N2: direct 0.1274  hops 2.0  h1 2.7516  h2 2.3194  h3 1.5862
+  N3: direct 0.2253  hops 2.0  h1 1.1235  h2 1.3042  h3 1.4052
+--- taste
+  A: direct 0.1213  hops 2.0  h1 4.7606  h2 3.2508  h3 1.8203
+  N1: direct 0.1126  hops 1.0  h1 4.2247  h2 2.9541  h3 2.0791
+  N2: direct 0.0936  hops 2.0  h1 3.4256  h2 3.1393  h3 2.1129
+  N3: direct 0.0543  hops 2.0  h1 0.7430  h2 0.8976  h3 0.4860

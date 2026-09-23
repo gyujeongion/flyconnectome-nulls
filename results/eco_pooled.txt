@@ -1,0 +1,8 @@
+pooled runs: 40
+ gen0         A-N1 median +0.322 A>null 38/40 p_holm 3.64e-11 | A-N2 median +0.382 A>null 38/40 p_holm 3.64e-11 | A-N3 median +0.428 A>null 40/40 p_holm 5.46e-12
+ AUC          A-N1 median -0.088 A>null 10/40 p_holm 1.88e-03 | A-N2 median -0.040 A>null 16/40 p_holm 1.79e-01 | A-N3 median +0.239 A>null 34/40 p_holm 3.49e-07
+ final        A-N1 median -0.240 A>null 4/40 p_holm 2.19e-07 | A-N2 median -0.183 A>null 9/40 p_holm 3.61e-05 | A-N3 median +0.246 A>null 30/40 p_holm 1.44e-03
+ abl_anosmic  A-N1 median -0.459 A>null 1/40 p_holm 3.64e-11 | A-N2 median -0.412 A>null 1/40 p_holm 1.64e-11 | A-N3 median -0.405 A>null 1/40 p_holm 3.64e-11
+seed-level (mean over the 4 ecologies per seed, n = 10):
+ gen0         A-N1 median +0.441 A>null 10/10 p_holm 0.0059 | A-N2 median +0.458 A>null 10/10 p_holm 0.0059 | A-N3 median +0.573 A>null 10/10 p_holm 0.0059
+ final        A-N1 median -0.271 A>null 0/10 p_holm 0.0059 | A-N2 median -0.247 A>null 2/10 p_holm 0.0195 | A-N3 median +0.265 A>null 10/10 p_holm 0.0059

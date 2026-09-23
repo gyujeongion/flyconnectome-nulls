@@ -1,0 +1,17 @@
+runs: 40
+
+=== generation 0 ===
+ noise biased (as evolved): A 0.505 N1 0.362 N2 0.322 N3 0.274
+ noise zero-mean: A 0.378 N1 0.354 N2 0.354 N3 0.263
+ fitness lost when drift removed (seed means): A +0.174 N1 -0.002 N2 -0.036 N3 +0.003
+   extra loss of connectome vs control: A-N1 +0.186 (10/10) p_holm 0.0059 | A-N2 +0.169 (10/10) p_holm 0.0059 | A-N3 +0.171 (10/10) p_holm 0.0059
+   connectome minus control under zero-mean noise: A-N1 +0.057 A ahead 8/10 p_holm 0.0977 | A-N2 +0.083 A ahead 7/10 p_holm 0.3223 | A-N3 +0.150 A ahead 10/10 p_holm 0.0059
+   per ecology (zero-mean, median A-N1 / A-N2 over seeds): P0.0_T0.0: +0.08/+0.12 P0.2_T0.0: +0.13/+0.19 P0.0_T1.0: -0.01/-0.03 P0.2_T1.0: +0.06/+0.02
+
+=== generation 500 ===
+ noise biased (as evolved): A 1.244 N1 1.337 N2 1.658 N3 0.654
+ noise zero-mean: A 0.980 N1 1.288 N2 1.577 N3 0.685
+ fitness lost when drift removed (seed means): A +0.136 N1 +0.066 N2 +0.069 N3 +0.067
+   extra loss of connectome vs control: A-N1 +0.156 (6/10) p_holm 0.2520 | A-N2 +0.122 (6/10) p_holm 0.2520 | A-N3 +0.118 (8/10) p_holm 0.2520
+   connectome minus control under zero-mean noise: A-N1 -0.279 A ahead 1/10 p_holm 0.0117 | A-N2 -0.410 A ahead 1/10 p_holm 0.0117 | A-N3 +0.260 A ahead 8/10 p_holm 0.0117
+   per ecology (zero-mean, median A-N1 / A-N2 over seeds): P0.0_T0.0: -1.05/-0.72 P0.2_T0.0: -0.32/-0.57 P0.0_T1.0: -0.15/-0.18 P0.2_T1.0: +0.04/-0.05

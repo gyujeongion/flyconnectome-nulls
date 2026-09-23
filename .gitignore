@@ -1,0 +1,8 @@
+runs/
+runs_*.log
+venv/
+__pycache__/
+data/*.parquet
+data/annotations.tsv
+data/*.csv
+paper/_*.md

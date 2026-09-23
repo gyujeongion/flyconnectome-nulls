@@ -1,0 +1,30 @@
+=== (1) crossover generation (median over seeds; 'never' = connectome stays ahead through gen 550) ===
+ P0T0: N1 median 150 crossed 10/10 | N2 median 150 crossed 10/10 | N3 median never crossed 4/10
+ P1T0: N1 median 200 crossed 9/10 | N2 median 175 crossed 10/10 | N3 median never crossed 3/10
+ P0T1: N1 median 50 crossed 10/10 | N2 median 50 crossed 10/10 | N3 median never crossed 5/10
+ P1T1: N1 median 200 crossed 10/10 | N2 median 200 crossed 10/10 | N3 median never crossed 4/10
+
+=== (2) cross-ecology common garden, generation-500 elites (fitness A - null, per seed) ===
+ runs with complete cross-ecology assay: 40/40
+ evolved in P0T0 -> tested in P0T0: N1 -0.361 1/10 p_holm 0.0117 | N2 -0.292 1/10 p_holm 0.0117 | N3 +0.677 7/10 p_holm 0.1309
+ evolved in P0T0 -> tested in P1T0: N1 -0.151 2/10 p_holm 0.0410 | N2 -0.210 2/10 p_holm 0.0410 | N3 +0.447 7/10 p_holm 0.1602
+ evolved in P0T0 -> tested in P0T1: N1 -0.197 3/10 p_holm 0.1465 | N2 -0.162 3/10 p_holm 0.1465 | N3 -0.010 5/10 p_holm 1.0000
+ evolved in P0T0 -> tested in P1T1: N1 -0.019 5/10 p_holm 1.0000 | N2 -0.169 2/10 p_holm 0.1465 | N3 +0.017 5/10 p_holm 1.0000
+ evolved in P1T0 -> tested in P0T0: N1 -0.662 2/10 p_holm 0.0273 | N2 -0.804 0/10 p_holm 0.0059 | N3 +0.404 8/10 p_holm 0.1934
+ evolved in P1T0 -> tested in P1T0: N1 -0.415 1/10 p_holm 0.0117 | N2 -0.600 0/10 p_holm 0.0059 | N3 +0.920 8/10 p_holm 0.0371
+ evolved in P1T0 -> tested in P0T1: N1 -0.254 2/10 p_holm 0.0977 | N2 -0.307 1/10 p_holm 0.0117 | N3 -0.057 4/10 p_holm 0.3223
+ evolved in P1T0 -> tested in P1T1: N1 -0.121 3/10 p_holm 0.1680 | N2 -0.170 0/10 p_holm 0.0059 | N3 +0.248 8/10 p_holm 0.2754
+ evolved in P0T1 -> tested in P0T0: N1 -0.227 2/10 p_holm 0.1680 | N2 -0.414 3/10 p_holm 0.1680 | N3 +0.710 10/10 p_holm 0.0059
+ evolved in P0T1 -> tested in P1T0: N1 +0.014 6/10 p_holm 1.0000 | N2 -0.078 4/10 p_holm 1.0000 | N3 +0.514 9/10 p_holm 0.0117
+ evolved in P0T1 -> tested in P0T1: N1 -0.147 2/10 p_holm 0.0977 | N2 -0.058 4/10 p_holm 0.3223 | N3 +0.118 9/10 p_holm 0.0410
+ evolved in P0T1 -> tested in P1T1: N1 -0.001 5/10 p_holm 0.6250 | N2 -0.058 3/10 p_holm 0.5508 | N3 +0.091 9/10 p_holm 0.1465
+ evolved in P1T1 -> tested in P0T0: N1 -0.099 3/10 p_holm 0.1680 | N2 -0.255 3/10 p_holm 0.2324 | N3 +0.689 9/10 p_holm 0.0293
+ evolved in P1T1 -> tested in P1T0: N1 +0.037 5/10 p_holm 0.9219 | N2 +0.144 6/10 p_holm 0.7500 | N3 +0.961 10/10 p_holm 0.0059
+ evolved in P1T1 -> tested in P0T1: N1 -0.138 3/10 p_holm 0.1113 | N2 -0.116 2/10 p_holm 0.1113 | N3 +0.013 5/10 p_holm 0.9219
+ evolved in P1T1 -> tested in P1T1: N1 -0.079 4/10 p_holm 1.0000 | N2 -0.033 4/10 p_holm 1.0000 | N3 +0.219 10/10 p_holm 0.0059
+
+=== (3) H3 home-vs-away: A-null gap at home minus mean gap away (per seed) ===
+ P0T0: N1 -0.248 2/10 p_holm 0.0586 | N2 -0.146 2/10 p_holm 0.0645 | N3 +0.371 7/10 p_holm 0.0586
+ P1T0: N1 -0.098 0/10 p_holm 0.0059 | N2 -0.128 4/10 p_holm 0.3223 | N3 +0.713 9/10 p_holm 0.0273
+ P0T1: N1 +0.016 6/10 p_holm 1.0000 | N2 -0.041 4/10 p_holm 1.0000 | N3 -0.322 0/10 p_holm 0.0059
+ P1T1: N1 +0.090 8/10 p_holm 0.4648 | N2 -0.007 5/10 p_holm 0.9219 | N3 -0.280 2/10 p_holm 0.0820

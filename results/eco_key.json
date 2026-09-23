@@ -1,0 +1,17 @@
+{
+ "runs_first_grid": "40",
+ "gen0_p_holm_max": "0.027",
+ "final_N1_per_ecology_pmax": "0.041",
+ "sustained_crossing_N1": "36 of 40",
+ "sustained_crossing_N2": "31 of 40",
+ "seed_final_N1_p": "0.0059",
+ "seed_final_N2_p": "0.0195",
+ "olfaction_comparisons": "16",
+ "shortcut_share_N1": "0.107",
+ "shortcut_share_N2": "0.106",
+ "shortcut_share_connectome": "0.0001",
+ "equivalence_N4": "+0.002",
+ "transplant_effect": "+0.44",
+ "interior_scramble_loss": "46 to 55",
+ "equivalence_delta": "0.10"
+}

@@ -1,0 +1,46 @@
+runs found: 20   ecologies: ['P0.0', 'P0.2']
+
+[P0.0] n=10 seeds, final fitness by condition
+       A  mean  2.478   90% CI [ 2.426,  2.532]
+     AS1  mean  2.669   90% CI [ 2.489,  2.833]
+     AS3  mean  2.893   90% CI [ 2.759,  3.039]
+     AS5  mean  2.942   90% CI [ 2.768,  3.111]
+    AS10  mean  3.148   90% CI [ 2.994,  3.309]
+   Page's L = 516  z = 4.17  p(one-sided, increasing) = 1.495e-05
+   seed-level Spearman rho: mean +0.660  (9/10 positive)
+
+[P0.2] n=10 seeds, final fitness by condition
+       A  mean  2.255   90% CI [ 2.156,  2.371]
+     AS1  mean  2.407   90% CI [ 2.309,  2.504]
+     AS3  mean  2.486   90% CI [ 2.304,  2.673]
+     AS5  mean  2.550   90% CI [ 2.393,  2.690]
+    AS10  mean  2.721   90% CI [ 2.543,  2.916]
+   Page's L = 492  z = 2.66  p(one-sided, increasing) = 0.00395
+   seed-level Spearman rho: mean +0.420  (7/10 positive)
+
+=== D1 (pooled seed means, n=10) ===
+       A  mean  2.367   90% CI [ 2.326,  2.412]
+     AS1  mean  2.538   90% CI [ 2.445,  2.628]
+     AS3  mean  2.690   90% CI [ 2.545,  2.838]
+     AS5  mean  2.746   90% CI [ 2.620,  2.860]
+    AS10  mean  2.934   90% CI [ 2.802,  3.073]
+   Page's L = 524  z = 4.68  p = 1.433e-06
+   Spearman rho mean +0.740 (9/10 positive)
+   D1 SUPPORTED (pre-registered p < 0.05)
+
+=== D2 (SHAM - A, equivalence bound +-0.1) ===
+   [ P0.0] mean +0.144  90% CI [+0.072, +0.222]  NOT inside bound
+   [ P0.2] mean -0.077  90% CI [-0.257, +0.087]  NOT inside bound
+   [pooled] mean +0.034  90% CI [-0.062, +0.123]  NOT inside bound
+
+=== D3 (cost of ablating olfaction, by shortcut share) ===
+   [P0.0] A=0.283  AS1=0.647  AS3=0.861  AS5=0.891  AS10=1.260
+        Page's L = 513  z = 3.98  p = 3.382e-05
+   [P0.2] A=0.075  AS1=0.493  AS3=0.687  AS5=0.714  AS10=0.949
+        Page's L = 527  z = 4.87  p = 5.583e-07
+
+=== D4 (generation 0, should show no AS-step difference) ===
+   A=0.528  AS1=0.514  AS3=0.558  AS5=0.486  AS10=0.511
+   Page's L = 417  z = -2.09  p = 0.9816  no trend (as predicted)
+
+wrote results/dose_key.json

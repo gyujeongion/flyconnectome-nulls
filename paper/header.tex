@@ -1,0 +1,10 @@
+\usepackage{graphicx}
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {\origfigure[H]} {\endorigfigure}
+\usepackage{longtable}
+\setlength{\LTleft}{0pt}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\footnotesize}
+\setkeys{Gin}{width=\linewidth}

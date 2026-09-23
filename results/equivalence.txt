@@ -1,0 +1,56 @@
+corrected grid: 40 runs; transplant: 20 runs; delta = 0.1
+
+=== corrected grid, generation 600, connectome minus control ===
+ P0T0
+   A - N1                     median -0.621  95% CI [-0.691,-0.179]  90% CI [-0.661,-0.469]  2/10  p=0.0137  not equivalent (90% CI leaves +-0.10)
+   A - N2                     median -0.403  95% CI [-0.549,-0.295]  90% CI [-0.421,-0.308]  0/10  p=0.0020  not equivalent (90% CI leaves +-0.10)
+   A - N4                     median -0.064  95% CI [-0.262,+0.038]  90% CI [-0.255,+0.002]  3/10  p=0.2324  not equivalent (90% CI leaves +-0.10)
+   A - N5                     median -0.264  95% CI [-0.450,-0.106]  90% CI [-0.368,-0.179]  1/10  p=0.0098  not equivalent (90% CI leaves +-0.10)
+ P1T0
+   A - N1                     median -0.312  95% CI [-0.491,-0.194]  90% CI [-0.441,-0.217]  0/10  p=0.0020  not equivalent (90% CI leaves +-0.10)
+   A - N2                     median -0.338  95% CI [-0.577,-0.030]  90% CI [-0.530,-0.074]  2/10  p=0.0195  not equivalent (90% CI leaves +-0.10)
+   A - N4                     median +0.021  95% CI [-0.044,+0.052]  90% CI [-0.026,+0.038]  7/10  p=0.5566  EQUIVALENT within +-0.10
+   A - N5                     median +0.067  95% CI [-0.142,+0.235]  90% CI [-0.067,+0.090]  7/10  p=0.5566  EQUIVALENT within +-0.10
+ P0T1
+   A - N1                     median -0.159  95% CI [-0.211,+0.063]  90% CI [-0.205,+0.010]  3/10  p=0.1602  not equivalent (90% CI leaves +-0.10)
+   A - N2                     median -0.017  95% CI [-0.335,+0.034]  90% CI [-0.333,+0.005]  3/10  p=0.1309  not equivalent (90% CI leaves +-0.10)
+   A - N4                     median -0.031  95% CI [-0.128,+0.095]  90% CI [-0.116,+0.085]  5/10  p=0.5566  not equivalent (90% CI leaves +-0.10)
+   A - N5                     median -0.015  95% CI [-0.177,+0.077]  90% CI [-0.102,+0.061]  5/10  p=0.4922  not equivalent (90% CI leaves +-0.10)
+ P1T1
+   A - N1                     median +0.054  95% CI [-0.094,+0.212]  90% CI [-0.054,+0.127]  6/10  p=0.4922  not equivalent (90% CI leaves +-0.10)
+   A - N2                     median +0.015  95% CI [-0.197,+0.210]  90% CI [-0.132,+0.137]  5/10  p=0.8457  not equivalent (90% CI leaves +-0.10)
+   A - N4                     median +0.120  95% CI [-0.113,+0.311]  90% CI [-0.064,+0.283]  6/10  p=0.2324  not equivalent (90% CI leaves +-0.10)
+   A - N5                     median +0.070  95% CI [-0.020,+0.210]  90% CI [-0.009,+0.205]  6/10  p=0.1309  not equivalent (90% CI leaves +-0.10)
+ pooled (seed means)
+   A - N1                     median -0.224  95% CI [-0.338,-0.056]  90% CI [-0.337,-0.103]  2/10  p=0.0098  not equivalent (90% CI leaves +-0.10)
+   A - N2                     median -0.199  95% CI [-0.414,-0.113]  90% CI [-0.321,-0.133]  1/10  p=0.0039  not equivalent (90% CI leaves +-0.10)
+   A - N4                     median +0.002  95% CI [-0.038,+0.051]  90% CI [-0.026,+0.045]  6/10  p=0.6250  EQUIVALENT within +-0.10
+   A - N5                     median -0.074  95% CI [-0.098,+0.050]  90% CI [-0.096,+0.002]  3/10  p=0.3750  EQUIVALENT within +-0.10
+
+=== transplant experiment, generation 600 ===
+ P0T0
+   AS - A                     median +0.445  95% CI [+0.221,+0.670]  90% CI [+0.221,+0.643]  10/10  p=0.0020  not equivalent (90% CI leaves +-0.10)
+   N2 - A                     median +0.549  95% CI [+0.264,+0.670]  90% CI [+0.372,+0.637]  9/10  p=0.0059  not equivalent (90% CI leaves +-0.10)
+   N2R - N2                   median -0.434  95% CI [-0.691,-0.205]  90% CI [-0.599,-0.241]  1/10  p=0.0039  not equivalent (90% CI leaves +-0.10)
+   N2R - A                    median -0.106  95% CI [-0.238,+0.265]  90% CI [-0.227,+0.247]  4/10  p=0.8457  not equivalent (90% CI leaves +-0.10)
+   N4 - A                     median +0.127  95% CI [-0.047,+0.372]  90% CI [-0.045,+0.300]  7/10  p=0.1055  not equivalent (90% CI leaves +-0.10)
+ P1T0
+   AS - A                     median +0.475  95% CI [+0.339,+0.648]  90% CI [+0.352,+0.618]  10/10  p=0.0020  not equivalent (90% CI leaves +-0.10)
+   N2 - A                     median +0.097  95% CI [-0.059,+0.354]  90% CI [-0.057,+0.270]  7/10  p=0.2324  not equivalent (90% CI leaves +-0.10)
+   N2R - N2                   median -0.002  95% CI [-0.335,+0.043]  90% CI [-0.243,+0.031]  5/10  p=0.3223  not equivalent (90% CI leaves +-0.10)
+   N2R - A                    median +0.046  95% CI [-0.302,+0.297]  90% CI [-0.244,+0.229]  6/10  p=1.0000  not equivalent (90% CI leaves +-0.10)
+   N4 - A                     median +0.070  95% CI [-0.110,+0.263]  90% CI [-0.045,+0.241]  6/10  p=0.3750  not equivalent (90% CI leaves +-0.10)
+ pooled (seed means)
+   AS - A                     median +0.440  95% CI [+0.360,+0.555]  90% CI [+0.376,+0.491]  10/10  p=0.0020  not equivalent (90% CI leaves +-0.10)
+   N2 - A                     median +0.348  95% CI [+0.073,+0.492]  90% CI [+0.148,+0.412]  9/10  p=0.0098  not equivalent (90% CI leaves +-0.10)
+   N2R - N2                   median -0.268  95% CI [-0.461,-0.149]  90% CI [-0.392,-0.167]  1/10  p=0.0059  not equivalent (90% CI leaves +-0.10)
+   N2R - A                    median -0.006  95% CI [-0.195,+0.273]  90% CI [-0.150,+0.095]  5/10  p=1.0000  not equivalent (90% CI leaves +-0.10)
+   N4 - A                     median +0.092  95% CI [-0.017,+0.335]  90% CI [+0.006,+0.317]  8/10  p=0.0840  not equivalent (90% CI leaves +-0.10)
+
+=== interactions (paired, per seed) ===
+   removal effect: safe - pred median -0.356  95% CI [-0.483,-0.046]  90% CI [-0.473,-0.051]  2/10  p=0.0273  not equivalent (90% CI leaves +-0.10)
+   transplant: gen600 - gen0  median +0.399  95% CI [+0.152,+0.526]  90% CI [+0.159,+0.497]  10/10  p=0.0020  not equivalent (90% CI leaves +-0.10)
+
+=== seeds needed for equivalence within +-0.10 (paired SD from the data) ===
+   A - N4 (pooled): median +0.002, SD 0.048 -> n ≈ 5 seeds for a 90% CI inside +-0.1
+   A - N5 (pooled): median -0.074, SD 0.098 -> n ≈ 38 seeds for a 90% CI inside +-0.1

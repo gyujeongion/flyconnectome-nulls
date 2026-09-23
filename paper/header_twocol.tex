@@ -1,0 +1,19 @@
+\usepackage{longtable}
+\usepackage{ltablex}
+\usepackage{graphicx}
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {\origfigure[H]} {\endorigfigure}
+\usepackage{etoolbox}
+\AtBeginEnvironment{table}{\footnotesize}
+\usepackage{caption}
+\captionsetup{font=small}
+\setkeys{Gin}{width=\linewidth}
+
+% two-column: tables and wide figures span both columns
+\usepackage{stfloats}
+% two-column mode: make longtable behave like a normal table
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\onecolumn}
+\AtEndEnvironment{longtable}{\twocolumn}

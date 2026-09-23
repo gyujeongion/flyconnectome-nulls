@@ -1,0 +1,39 @@
+{
+ "dose": {
+  "n": 120,
+  "plasticity_rel": {
+   "median": 0.1524388212990241,
+   "p90": 0.6125262314689655,
+   "max": 0.9198254645347326
+  },
+  "interaction_rel": {
+   "median": -0.019439523871756795,
+   "p90": 0.1501873916445149,
+   "max": 0.42587624386490425
+  }
+ },
+ "ecofix": {
+  "n": 100,
+  "plasticity_rel": {
+   "median": 0.14208748615643466,
+   "p90": 0.46456988961302037,
+   "max": 0.7117307605435785
+  },
+  "interaction_rel": {
+   "median": 0.00464266645477761,
+   "p90": 0.17882376807683775,
+   "max": 0.358921993663725
+  }
+ },
+ "pooled_interaction_rel": {
+  "n": 220,
+  "median": -0.010404038185552165,
+  "p90": 0.16733369648438334,
+  "max": 0.42587624386490425
+ },
+ "gate": {
+  "G1_MIN": 0.3,
+  "G2_MIN_POS": 2,
+  "rationale": "G1 is about twice the pooled 90th percentile of the control ecology and below its maximum; fixed before the candidate ecology existed"
+ }
+}

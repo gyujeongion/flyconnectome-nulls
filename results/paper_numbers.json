@@ -1,0 +1,317 @@
+{
+ "first_grid_primary_auc_A_minus_null": {
+  "N1": {
+   "seed_mean_median": -0.10033294355327436,
+   "pooled_run_mean": -0.08867658236148686,
+   "n_seeds": 10,
+   "n_runs": 40
+  },
+  "N2": {
+   "seed_mean_median": -0.02607736025344244,
+   "pooled_run_mean": -0.054060665975240174,
+   "n_seeds": 10,
+   "n_runs": 40
+  }
+ },
+ "intervention_gen0_AS_minus_A": {
+  "median": 0.04426787793636322,
+  "ci90": [
+   -0.04181835055351257,
+   0.18268895149230957
+  ],
+  "ci95": [
+   -0.06237006187438965,
+   0.19790597259998322
+  ],
+  "n_seeds": 10,
+  "n_positive": 7
+ },
+ "interior_assay_intact_fitness": {
+  "min": 0.44483956694602966,
+  "median": 1.1502180099487305,
+  "n": 200
+ },
+ "olfactory_to_descending": {
+  "n_descending_groups": 53,
+  "hop_counts": {
+   "1": 1,
+   "2": 15,
+   "3": 36,
+   "4": 1
+  },
+  "direct_edges": [
+   {
+    "src": "ORN_VA6|L",
+    "dst": "DNge075|R",
+    "weight": 0.000891265575774014
+   },
+   {
+    "src": "ORN_VA6|R",
+    "dst": "DNge075|R",
+    "weight": 0.000891265575774014
+   }
+  ],
+  "n_edges_total": 14989,
+  "raw_shortcut_share": 5.596705887001008e-05,
+  "names_available": true
+ },
+ "mutational_neighbourhood_ci95": {
+  "max_abs_bound_pp": 2.73,
+  "n_comparisons": 18,
+  "within_pm2pp": 12,
+  "margin_set_in_analysis_pp": 2.0
+ },
+ "interior_overlap_with_connectome": {
+  "N4": {
+   "min": 0.111,
+   "max": 0.121,
+   "n": 60
+  },
+  "N5": {
+   "min": 0.088,
+   "max": 0.095,
+   "n": 60
+  }
+ },
+ "dose_transplant_by_seed": {
+  "AS1": {
+   "share_pct": [
+    1.04,
+    1.08,
+    1.7,
+    1.01,
+    1.14,
+    1.43,
+    1.01,
+    1.08,
+    1.09,
+    1.07
+   ],
+   "swaps": [
+    17,
+    27,
+    8,
+    12,
+    5,
+    5,
+    24,
+    20,
+    9,
+    3
+   ]
+  },
+  "AS3": {
+   "share_pct": [
+    3.23,
+    3.01,
+    4.56,
+    3.01,
+    3.25,
+    3.14,
+    3.16,
+    3.01,
+    3.24,
+    3.66
+   ],
+   "swaps": [
+    31,
+    21,
+    34,
+    48,
+    28,
+    24,
+    35,
+    43,
+    23,
+    11
+   ]
+  },
+  "AS5": {
+   "share_pct": [
+    5.49,
+    5.32,
+    5.33,
+    5.15,
+    5.11,
+    5.41,
+    5.83,
+    5.16,
+    5.47,
+    5.01
+   ],
+   "swaps": [
+    46,
+    36,
+    56,
+    46,
+    52,
+    31,
+    53,
+    58,
+    28,
+    25
+   ]
+  },
+  "AS10": {
+   "share_pct": [
+    10.49,
+    10.0,
+    10.02,
+    10.64,
+    10.16,
+    10.06,
+    10.33,
+    10.39,
+    10.03,
+    10.5
+   ],
+   "swaps": [
+    100,
+    91,
+    96,
+    93,
+    72,
+    118,
+    92,
+    68,
+    126,
+    129
+   ]
+  },
+  "SHAM": {
+   "share_pct": [],
+   "swaps": [
+    101,
+    101,
+    101,
+    101,
+    101,
+    101,
+    101,
+    101,
+    101,
+    101
+   ]
+  }
+ },
+ "dose_transplant_summary": {
+  "AS1": {
+   "share_pct_range": [
+    1.01,
+    1.7
+   ],
+   "swaps_range": [
+    3,
+    27
+   ],
+   "swaps_mean": 13.0
+  },
+  "AS3": {
+   "share_pct_range": [
+    3.01,
+    4.56
+   ],
+   "swaps_range": [
+    11,
+    48
+   ],
+   "swaps_mean": 29.8
+  },
+  "AS5": {
+   "share_pct_range": [
+    5.01,
+    5.83
+   ],
+   "swaps_range": [
+    25,
+    58
+   ],
+   "swaps_mean": 43.1
+  },
+  "AS10": {
+   "share_pct_range": [
+    10.0,
+    10.64
+   ],
+   "swaps_range": [
+    68,
+    129
+   ],
+   "swaps_mean": 98.5
+  },
+  "SHAM": {
+   "share_pct_range": null,
+   "swaps_range": [
+    101,
+    101
+   ],
+   "swaps_mean": 101.0
+  }
+ },
+ "transplant_vs_sham_by_seed": {
+  "sham_swaps": 101,
+  "rows": [
+   {
+    "seed": 0,
+    "as10_swaps": 100,
+    "gap": 0.68
+   },
+   {
+    "seed": 1,
+    "as10_swaps": 91,
+    "gap": 0.5864
+   },
+   {
+    "seed": 2,
+    "as10_swaps": 96,
+    "gap": 0.3222
+   },
+   {
+    "seed": 3,
+    "as10_swaps": 93,
+    "gap": 1.018
+   },
+   {
+    "seed": 4,
+    "as10_swaps": 72,
+    "gap": 0.0053
+   },
+   {
+    "seed": 5,
+    "as10_swaps": 118,
+    "gap": 0.4569
+   },
+   {
+    "seed": 6,
+    "as10_swaps": 92,
+    "gap": 1.0387
+   },
+   {
+    "seed": 7,
+    "as10_swaps": 68,
+    "gap": 0.6353
+   },
+   {
+    "seed": 8,
+    "as10_swaps": 126,
+    "gap": 0.256
+   },
+   {
+    "seed": 9,
+    "as10_swaps": 129,
+    "gap": 0.3421
+   }
+  ],
+  "fewer_swaps": {
+   "n": 7,
+   "n_won": 7,
+   "mean_gap": 0.6122632367270333
+  },
+  "more_swaps": {
+   "n": 3,
+   "n_won": 3,
+   "mean_gap": 0.351673682530721
+  },
+  "corr_swapdiff_gap": -0.1586316391518536
+ }
+}
