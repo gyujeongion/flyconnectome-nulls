@@ -1,5 +1,6 @@
 """Figure 7: corrected grid (defect 28 fixed) with shortcut-carrying and interface-preserving controls."""
 import json, glob, os, numpy as np
+from seeds import registered  # registered grids are seeds 0-9; see seeds.py
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.right": False, "axes.edgecolor": "#8a8a86",
@@ -11,7 +12,7 @@ LS = {"A": "-", "N1": "--", "N2": "-.", "N4": (0, (3, 1, 1, 1)), "N5": ":"}
 CELLS = [("0.0", "0.0", "P0T0: stationary predator, safe food"), ("0.2", "0.0", "P1T0: predator"),
          ("0.0", "1.0", "P0T1: toxin"), ("0.2", "1.0", "P1T1: predator + toxin")]
 def probes(pv, pt):
-    return [[json.loads(l) for l in open(f"{r}/probe.jsonl")] for r in sorted(glob.glob(f"runs/ecofix_P{pv}_T{pt}_s*")) if os.path.exists(f"{r}/done.flag")]
+    return [[json.loads(l) for l in open(f"{r}/probe.jsonl")] for r in sorted(registered(glob.glob(f"runs/ecofix_P{pv}_T{pt}_s*"))) if os.path.exists(f"{r}/done.flag")]
 fig, axes = plt.subplots(2, 2, figsize=(7.4, 5.6), sharex=True)
 for ax, (pv, pt, title) in zip(axes.flat, CELLS):
     D = probes(pv, pt); gens = np.array([p["gen"] for p in D[0]])

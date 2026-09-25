@@ -1,9 +1,10 @@
 """Is the recurrent interior doing work? Generation-500 samples re-evaluated with the interior zeroed or scrambled."""
 import json, glob, os, numpy as np
+from seeds import registered  # registered grids are seeds 0-9; see seeds.py
 from scipy.stats import wilcoxon
 CONDS = ["A", "N1", "N2", "N4", "N5"]; TAGS = ["intact", "interior_zeroed", "interior_scrambled"]
 D = {}
-for r in sorted(glob.glob("runs/ecofix_P*_s*")):
+for r in sorted(registered(glob.glob("runs/ecofix_P*_s*"))):
     f = f"{r}/assay.jsonl"
     if not os.path.exists(f): continue
     for l in open(f):

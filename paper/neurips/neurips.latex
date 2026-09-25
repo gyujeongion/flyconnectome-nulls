@@ -1,0 +1,54 @@
+% pandoc template: NeurIPS 2026 style, preprint option (non-anonymous, arXiv-ready), compiled with XeLaTeX
+\documentclass{article}
+\usepackage[preprint]{neurips_2026}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{texgyretermes}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\setmathfont{texgyretermes-math.otf}
+\setmonofont{lmmono10-regular.otf}[Scale=0.95]
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{longtable,array,calc}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{newunicodechar}
+\newunicodechar{ℝ}{\ensuremath{\BbbR}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{⊙}{\ensuremath{\odot}}
+\newunicodechar{𝒩}{\ensuremath{\mathcal{N}}}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{%
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi}
+\def\fps@figure{htbp}
+\makeatother
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\title{$title$}
+\author{$author$}
+
+\begin{document}
+\maketitle
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$body$
+
+\end{document}

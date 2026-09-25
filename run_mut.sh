@@ -1,6 +1,6 @@
 #!/bin/bash
 # PROTOCOL_MUT.md: mutational-neighbourhood assay on saved genotypes, generation 0/250/500, home ecology
-cd "$(dirname "$0")"
+cd ~/Development/260917_fly_evolution
 for s in 0 1 2 3 4 5 6 7 8 9; do
   for cfg in "0.0 0.0" "0.2 0.0" "0.0 1.0" "0.2 1.0"; do
     pv=${cfg%% *}; pt=${cfg##* }; run=runs/eco_P${pv}_T${pt}_s${s}

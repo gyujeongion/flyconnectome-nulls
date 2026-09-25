@@ -1,0 +1,73 @@
+2026-09-24 01:15:49 starting boundary-sham grid
+2026-09-24 01:15:49 RUN bsham_P0.0_T0.0_s0
+2026-09-24 03:21:02 OK bsham_P0.0_T0.0_s0
+2026-09-24 03:21:02 RUN bsham_P0.2_T0.0_s0
+2026-09-24 05:23:00 OK bsham_P0.2_T0.0_s0
+2026-09-24 05:23:00 SEED_DONE 0
+2026-09-24 05:23:00 RUN bsham_P0.0_T0.0_s1
+2026-09-24 07:24:53 OK bsham_P0.0_T0.0_s1
+2026-09-24 07:24:53 RUN bsham_P0.2_T0.0_s1
+2026-09-24 07:59:50 FAIL bsham_P0.2_T0.0_s1
+2026-09-24 07:59:50 SEED_DONE 1
+2026-09-24 07:59:50 RUN bsham_P0.0_T0.0_s2
+2026-09-24 09:00:47 FAIL bsham_P0.0_T0.0_s2
+2026-09-24 09:00:48 RUN bsham_P0.2_T0.0_s2
+2026-09-24 10:44:48 driver 2: waiting for in-flight bsham_P0.2_T0.0_s2 (pid 84963)
+2026-09-24 11:03:48 OK bsham_P0.2_T0.0_s2
+2026-09-24 11:03:48 driver 2: memory-capped launcher, retries up to 2
+2026-09-24 11:03:48 SEED_DONE 0
+2026-09-24 11:03:48 RUN bsham_P0.2_T0.0_s1 (attempt 1)
+2026-09-24 12:51:57 FAIL bsham_P0.2_T0.0_s1 attempt 1: 
+2026-09-24 12:53:57 RUN bsham_P0.2_T0.0_s1 (attempt 2)
+2026-09-24 13:40:51 driver 3: waiting for in-flight bsham_P0.2_T0.0_s1 (pid 26630)
+2026-09-24 14:11:51 FAIL bsham_P0.2_T0.0_s1 (in-flight run did not finish; log kept)
+2026-09-24 14:11:51 driver 3: memory-capped launcher, retries up to 2, failed logs kept
+2026-09-24 14:11:52 SEED_DONE 0
+2026-09-24 14:11:52 RUN bsham_P0.2_T0.0_s1 (attempt 1)
+2026-09-24 14:27:31 PAUSE driver 3 stopped for OOM fix testing (research log 57)
+2026-09-24 15:18:37 driver 4: memory-capped launcher, retries up to 2, failed logs kept
+2026-09-24 15:18:37 SEED_DONE 0
+2026-09-24 15:18:37 RUN bsham_P0.2_T0.0_s1 (attempt 1)
+2026-09-24 17:05:57 OK bsham_P0.2_T0.0_s1 peak 23.8 GB
+2026-09-24 17:05:57 SEED_DONE 1
+2026-09-24 17:05:57 RUN bsham_P0.0_T0.0_s2 (attempt 1)
+2026-09-24 18:52:31 OK bsham_P0.0_T0.0_s2 peak 23.8 GB
+2026-09-24 18:52:31 SEED_DONE 2
+2026-09-24 18:52:31 RUN bsham_P0.0_T0.0_s3 (attempt 1)
+2026-09-24 20:39:39 OK bsham_P0.0_T0.0_s3 peak 23.8 GB
+2026-09-24 20:39:39 RUN bsham_P0.2_T0.0_s3 (attempt 1)
+2026-09-24 22:26:06 OK bsham_P0.2_T0.0_s3 peak 23.8 GB
+2026-09-24 22:26:06 SEED_DONE 3
+2026-09-24 22:26:06 RUN bsham_P0.0_T0.0_s4 (attempt 1)
+2026-09-25 00:12:39 OK bsham_P0.0_T0.0_s4 peak 23.8 GB
+2026-09-25 00:12:39 RUN bsham_P0.2_T0.0_s4 (attempt 1)
+2026-09-25 01:59:40 OK bsham_P0.2_T0.0_s4 peak 23.8 GB
+2026-09-25 01:59:40 SEED_DONE 4
+2026-09-25 01:59:40 RUN bsham_P0.0_T0.0_s5 (attempt 1)
+2026-09-25 02:18:42 FAIL bsham_P0.0_T0.0_s5 attempt 1: exit 1 RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBuffer
+2026-09-25 02:20:42 RUN bsham_P0.0_T0.0_s5 (attempt 2)
+2026-09-25 04:07:19 OK bsham_P0.0_T0.0_s5 peak 23.8 GB
+2026-09-25 04:07:19 RUN bsham_P0.2_T0.0_s5 (attempt 1)
+2026-09-25 05:53:31 OK bsham_P0.2_T0.0_s5 peak 23.8 GB
+2026-09-25 05:53:31 SEED_DONE 5
+2026-09-25 05:53:31 RUN bsham_P0.0_T0.0_s6 (attempt 1)
+2026-09-25 07:38:50 OK bsham_P0.0_T0.0_s6 peak 23.8 GB
+2026-09-25 07:38:50 RUN bsham_P0.2_T0.0_s6 (attempt 1)
+2026-09-25 09:23:57 OK bsham_P0.2_T0.0_s6 peak 23.8 GB
+2026-09-25 09:23:57 SEED_DONE 6
+2026-09-25 09:23:57 RUN bsham_P0.0_T0.0_s7 (attempt 1)
+2026-09-25 11:08:44 OK bsham_P0.0_T0.0_s7 peak 23.8 GB
+2026-09-25 11:08:44 RUN bsham_P0.2_T0.0_s7 (attempt 1)
+2026-09-25 12:55:14 OK bsham_P0.2_T0.0_s7 peak 23.8 GB
+2026-09-25 12:55:14 SEED_DONE 7
+2026-09-25 12:55:14 RUN bsham_P0.0_T0.0_s8 (attempt 1)
+2026-09-25 14:41:57 OK bsham_P0.0_T0.0_s8 peak 26.0 GB
+2026-09-25 14:41:57 RUN bsham_P0.2_T0.0_s8 (attempt 1)
+2026-09-25 16:27:44 OK bsham_P0.2_T0.0_s8 peak 23.8 GB
+2026-09-25 16:27:44 SEED_DONE 8
+2026-09-25 16:27:44 RUN bsham_P0.0_T0.0_s9 (attempt 1)
+2026-09-25 18:13:35 OK bsham_P0.0_T0.0_s9 peak 23.8 GB
+2026-09-25 18:13:35 RUN bsham_P0.2_T0.0_s9 (attempt 1)
+2026-09-25 19:59:33 OK bsham_P0.2_T0.0_s9 peak 23.8 GB
+2026-09-25 19:59:34 SEED_DONE 9
+2026-09-25 19:59:34 BSHAM_DONE

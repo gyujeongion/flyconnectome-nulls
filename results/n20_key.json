@@ -1,0 +1,329 @@
+{
+ "endpoint": "common-garden fitness at the last probe (generation 550)",
+ "decision_rules": "Corrected grid at n = 20 seeds, per ecology, on the registered endpoint.\n\nSeeds 10-19 of the two T0 ecologies were re-run with the corrected grid's own frozen engine\n(evo_fix.py) and run_fix.sh's flags (run_followup.sh), after a first attempt was probed at the\nwrong toxicity (research log 45-2; kept as runs/ecofix_pp05_*). The registered endpoint is the\ncommon-garden fitness at the last probe (generation 550), as in analyze_fix.py.\n\nDecision rules, written before the extension data existed (2026-09-23, research log 46):\n\n  R1  Per-ecology equivalence at n = 20: the 90 % bootstrap interval of the median of\n      (connectome - control) lies inside +-0.10.\n  R2  The abstract's claim that the interior column shuffle N5 is ahead of the connectome in\n      the safe-food ecology (P0T0: -0.264 at n = 10, p_holm = 0.029) counts as REPLICATED if in\n      seeds 10-19 alone the median of A - N5 in P0T0 is negative and its 90 % interval excludes\n      zero; NOT REPLICATED if the interval includes zero; CONTRADICTED if it is positive with the\n      interval excluding zero.\n  R3  The two-ecology pool (seed means over P0T0 and P1T0) is a new estimand, not the paper's\n      four-ecology Table 2, and is reported as such.\n\nBefore any number is computed, every extension run's configuration must equal seed 0's apart\nfrom run name and seed. If one differs the script stops: that check is the one that would have\ncaught the probe mismatch the first time.\n",
+ "per_ecology": {
+  "P0T0": {
+   "N1": {
+    "s0-9": {
+     "median": -0.621138334274292,
+     "ci90": [
+      -0.660508394241333,
+      -0.469301700592041
+     ],
+     "n": 10,
+     "n_positive": 2,
+     "inside": false
+    },
+    "s10-19": {
+     "median": -0.3040800094604492,
+     "ci90": [
+      -0.5127389430999756,
+      -0.1608341932296753
+     ],
+     "n": 10,
+     "n_positive": 1,
+     "inside": false
+    },
+    "n20": {
+     "median": -0.4905977249145508,
+     "ci90": [
+      -0.6235451698303223,
+      -0.29769372940063477
+     ],
+     "n": 20,
+     "n_positive": 3,
+     "inside": false,
+     "p_holm": 0.00104522705078125
+    }
+   },
+   "N2": {
+    "s0-9": {
+     "median": -0.4029664993286133,
+     "ci90": [
+      -0.42055320739746094,
+      -0.3077206611633301
+     ],
+     "n": 10,
+     "n_positive": 0,
+     "inside": false
+    },
+    "s10-19": {
+     "median": 0.10039341449737549,
+     "ci90": [
+      -0.06781864166259766,
+      0.3323814868927002
+     ],
+     "n": 10,
+     "n_positive": 7,
+     "inside": false
+    },
+    "n20": {
+     "median": -0.2141176462173462,
+     "ci90": [
+      -0.3749338388442993,
+      0.04179859161376953
+     ],
+     "n": 20,
+     "n_positive": 7,
+     "inside": false,
+     "p_holm": 0.247650146484375
+    }
+   },
+   "N4": {
+    "s0-9": {
+     "median": -0.06361269950866699,
+     "ci90": [
+      -0.2550477981567383,
+      0.002119779586791992
+     ],
+     "n": 10,
+     "n_positive": 3,
+     "inside": false
+    },
+    "s10-19": {
+     "median": 0.09007346630096436,
+     "ci90": [
+      -0.1086573600769043,
+      0.21655607223510742
+     ],
+     "n": 10,
+     "n_positive": 6,
+     "inside": false
+    },
+    "n20": {
+     "median": -0.010588526725769043,
+     "ci90": [
+      -0.1136634349822998,
+      0.08020377159118652
+     ],
+     "n": 20,
+     "n_positive": 9,
+     "inside": false,
+     "p_holm": 0.8408222198486328
+    }
+   },
+   "N5": {
+    "s0-9": {
+     "median": -0.2635117769241333,
+     "ci90": [
+      -0.36832332611083984,
+      -0.1790177822113037
+     ],
+     "n": 10,
+     "n_positive": 1,
+     "inside": false
+    },
+    "s10-19": {
+     "median": 0.03113996982574463,
+     "ci90": [
+      -0.06809473037719727,
+      0.15193867683410645
+     ],
+     "n": 10,
+     "n_positive": 6,
+     "inside": false
+    },
+    "n20": {
+     "median": -0.10391128063201904,
+     "ci90": [
+      -0.2082080841064453,
+      0.0163118839263916
+     ],
+     "n": 20,
+     "n_positive": 7,
+     "inside": false,
+     "p_holm": 0.2654533386230469
+    }
+   }
+  },
+  "P1T0": {
+   "N1": {
+    "s0-9": {
+     "median": -0.3119666576385498,
+     "ci90": [
+      -0.4405174255371094,
+      -0.19733119010925293
+     ],
+     "n": 10,
+     "n_positive": 0,
+     "inside": false
+    },
+    "s10-19": {
+     "median": -0.4170112609863281,
+     "ci90": [
+      -0.5215332508087158,
+      0.06683981418609619
+     ],
+     "n": 10,
+     "n_positive": 3,
+     "inside": false
+    },
+    "n20": {
+     "median": -0.33293378353118896,
+     "ci90": [
+      -0.48151540756225586,
+      -0.19733119010925293
+     ],
+     "n": 20,
+     "n_positive": 3,
+     "inside": false,
+     "p_holm": 0.00406646728515625
+    }
+   },
+   "N2": {
+    "s0-9": {
+     "median": -0.33806753158569336,
+     "ci90": [
+      -0.5301401615142822,
+      -0.07385635375976562
+     ],
+     "n": 10,
+     "n_positive": 2,
+     "inside": false
+    },
+    "s10-19": {
+     "median": -0.10064446926116943,
+     "ci90": [
+      -0.33514976501464844,
+      0.10265159606933594
+     ],
+     "n": 10,
+     "n_positive": 4,
+     "inside": false
+    },
+    "n20": {
+     "median": -0.20269238948822021,
+     "ci90": [
+      -0.42957305908203125,
+      -0.03176617622375488
+     ],
+     "n": 20,
+     "n_positive": 6,
+     "inside": false,
+     "p_holm": 0.04593658447265625
+    }
+   },
+   "N4": {
+    "s0-9": {
+     "median": 0.021112680435180664,
+     "ci90": [
+      -0.025646686553955078,
+      0.03838920593261719
+     ],
+     "n": 10,
+     "n_positive": 7,
+     "inside": true
+    },
+    "s10-19": {
+     "median": -0.02663600444793701,
+     "ci90": [
+      -0.16830897331237793,
+      0.05001544952392578
+     ],
+     "n": 10,
+     "n_positive": 3,
+     "inside": false
+    },
+    "n20": {
+     "median": 0.002740144729614258,
+     "ci90": [
+      -0.04196882247924805,
+      0.029418230056762695
+     ],
+     "n": 20,
+     "n_positive": 10,
+     "inside": true,
+     "p_holm": 1.0
+    }
+   },
+   "N5": {
+    "s0-9": {
+     "median": 0.0668257474899292,
+     "ci90": [
+      -0.06659436225891113,
+      0.08992481231689453
+     ],
+     "n": 10,
+     "n_positive": 7,
+     "inside": true
+    },
+    "s10-19": {
+     "median": 0.0026099681854248047,
+     "ci90": [
+      -0.17453622817993164,
+      0.14375758171081543
+     ],
+     "n": 10,
+     "n_positive": 5,
+     "inside": false
+    },
+    "n20": {
+     "median": 0.05609941482543945,
+     "ci90": [
+      -0.0967879295349114,
+      0.08992481231689453
+     ],
+     "n": 20,
+     "n_positive": 12,
+     "inside": true,
+     "p_holm": 1.0
+    }
+   }
+  }
+ },
+ "R2_N5_ahead_in_P0T0": {
+  "seeds_10_19": {
+   "median": 0.03113996982574463,
+   "ci90": [
+    -0.06809473037719727,
+    0.15193867683410645
+   ],
+   "n": 10,
+   "n_positive": 6,
+   "inside": false
+  },
+  "verdict": "NOT REPLICATED"
+ },
+ "pooled_two_T0_ecologies": {
+  "N1": {
+   "median": -0.40118271112442017,
+   "ci90": [
+    -0.4971271753311157,
+    -0.24074327945709229
+   ],
+   "n": 20,
+   "n_positive": 3,
+   "inside": false
+  },
+  "N2": {
+   "median": -0.1547379493713379,
+   "ci90": [
+    -0.27277374267578125,
+    -0.05952644348144531
+   ],
+   "n": 20,
+   "n_positive": 4,
+   "inside": false
+  },
+  "N4": {
+   "median": -0.00023370981216430664,
+   "ci90": [
+    -0.08700919151306152,
+    0.08324790000915527
+   ],
+   "n": 20,
+   "n_positive": 10,
+   "inside": true
+  },
+  "N5": {
+   "median": -0.05850338935852051,
+   "ci90": [
+    -0.092559814453125,
+    0.01823902130126953
+   ],
+   "n": 20,
+   "n_positive": 7,
+   "inside": true
+  }
+ }
+}

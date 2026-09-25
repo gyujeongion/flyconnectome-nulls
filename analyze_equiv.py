@@ -1,6 +1,7 @@
 """Council round 2 requests: paired effects per ecology with CIs, TOST-style equivalence, interaction tests,
 and the change in the transplant effect from generation 0 to 600. All post hoc."""
 import json, glob, os, numpy as np
+from seeds import registered  # registered grids are seeds 0-9; see seeds.py
 from scipy.stats import wilcoxon
 rng = np.random.default_rng(0)
 DELTA = 0.10          # smallest effect of interest: half the shortcut artefact (|N2-A| = 0.20-0.35)
@@ -10,7 +11,7 @@ def boot_ci(d, lvl=95):
 def load(pat, conds, cells):
     E = {}
     for (pv, pt), lab in cells.items():
-        for r in sorted(glob.glob(f"runs/{pat}_P{pv}_T{pt}_s*")):
+        for r in sorted(registered(glob.glob(f"runs/{pat}_P{pv}_T{pt}_s*"))):
             if not os.path.exists(f"{r}/done.flag"): continue
             p = [json.loads(l) for l in open(f"{r}/probe.jsonl")]
             E[(lab, int(r.split('_s')[-1]))] = {c: dict(gen0=p[0][f"{c}.normal"]["fit"], final=p[-1][f"{c}.normal"]["fit"]) for c in conds}

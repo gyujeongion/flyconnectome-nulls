@@ -1,6 +1,6 @@
 #!/bin/bash
 # PROTOCOL_DOSE.md: graded olfactory shortcut share + rewiring-matched sham, two ecologies, 10 seeds, 600 generations
-cd "$(dirname "$0")"
+cd ~/Development/260917_fly_evolution
 for s in 0 1 2 3 4 5 6 7 8 9; do
   for cfg in "0.0 0.0" "0.2 0.0"; do
     pv=${cfg%% *}; pt=${cfg##* }; run=dose_P${pv}_T${pt}_s${s}

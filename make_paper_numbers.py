@@ -121,8 +121,8 @@ out["mutational_neighbourhood_ci95"] = {
 # ---------------------------------------------------------------- 6. boundary-preserving nulls, interior overlap
 ov = {"N4": [], "N5": []}
 for f in sorted(glob.glob("runs_ecofix_P*_s*.log")):
-    if f.endswith("_assay.log"):
-        continue
+    if f.endswith("_assay.log") or int(re.search(r"_s(\d+)\.log$", f).group(1)) >= 10:
+        continue  # registered grid only (seeds 0-9); the n = 20 extension is reported separately
     for l in open(f, errors="ignore"):
         m = re.match(r"(N4|N5): interface .* interior overlap ([0-9.]+)", l)
         if m:
@@ -175,6 +175,51 @@ out["transplant_vs_sham_by_seed"] = {
     "fewer_swaps": {"n": len(fewer), "n_won": int(sum(g > 0 for g in fewer)), "mean_gap": float(np.mean(fewer))},
     "more_swaps": {"n": len(more), "n_won": int(sum(g > 0 for g in more)), "mean_gap": float(np.mean(more))},
     "corr_swapdiff_gap": float(np.corrcoef([n - sham_n for _, n, _ in rows], [g for *_, g in rows])[0, 1])}
+# the paper's "full dose ahead of the sham by 0.534 (90 % CI ...)": mean over seeds of the seed-mean gap,
+# percentile bootstrap of the mean, same convention and seed as analyze_dose.py (independent stream)
+_g = np.array([g for *_, g in rows]); _b = np.random.default_rng(12345).choice(_g, (10000, len(_g))).mean(1)
+out["transplant_vs_sham_by_seed"].update({"mean_gap_all": float(_g.mean()), "n_won_all": int((_g > 0).sum()),
+                                          "ci90_mean_gap": [float(np.percentile(_b, 5)), float(np.percentile(_b, 95))]})
+
+
+# ---------------------------------------------------------------- 9. numbers the NeurIPS draft quoted without a file
+# (audit of 2026-09-24). No random draws here, so the values above are unchanged.
+def ecol_gap(pv):
+    g = [last(f"runs/dose_P{pv}_T0.0_s{s}")["AS10.normal"]["fit"] - last(f"runs/dose_P{pv}_T0.0_s{s}")["SHAM.normal"]["fit"]
+         for s in sorted(as10)]
+    return {"mean_gap": float(np.mean(g)), "n_won": int(sum(x > 0 for x in g)), "n": len(g)}
+
+
+out["transplant_vs_sham_by_ecology"] = {"P0T0": ecol_gap("0.0"), "P1T0": ecol_gap("0.2")}
+
+# calibration spread in the corrected grid (seeds 0-9, four ecologies), per condition: median and range over runs
+HOMEO = re.compile(r"^homeostasis (\w+): (\{.*?\})", re.M)
+cal = {}
+for f in sorted(glob.glob("runs_ecofix_P*_T*_s*.log")):
+    m = re.search(r"_s(\d+)\.log$", f)            # skips the *_assay.log files
+    if not m or int(m.group(1)) >= 10:
+        continue
+    for c, d in HOMEO.findall(open(f).read()):
+        d = eval(d, {"__builtins__": {}})
+        cal.setdefault(c, []).append((d["group_act_sd"], d["silent_groups"]))
+out["calibration_corrected_grid"] = {
+    c: {"runs": len(v), "sd_median": float(np.median([a for a, _ in v])), "sd_range": [min(a for a, _ in v), max(a for a, _ in v)],
+        "silent_median": float(np.median([b for _, b in v])), "silent_range": [min(b for _, b in v), max(b for _, b in v)]}
+    for c, v in sorted(cal.items())}
+
+# wall time of one 5-condition, 600-generation corrected-grid run: RUN -> OK in the follow-up driver log
+ts = lambda l: np.datetime64(l[:19].replace(" ", "T"))
+dur, start = [], {}
+for l in open("followup.log"):
+    m = re.search(r"(RUN|OK) (ecofix_P\S+)", l)
+    if m and m.group(1) == "RUN": start[m.group(2)] = ts(l)
+    elif m and m.group(2) in start: dur.append(float((ts(l) - start.pop(m.group(2))) / np.timedelta64(1, "m")))
+out["run_minutes_corrected_grid"] = {"n": len(dur), "median": float(np.median(dur)), "range": [min(dur), max(dur)]} if dur else None
+
+# size of the raw run outputs that are not redistributed
+_raw = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk("runs") for f in fs)
+_logs = sum(os.path.getsize(f) for f in glob.glob("runs_*.log"))
+out["raw_outputs_gb"] = {"runs_dirs": round(_raw / 1e9, 2), "run_logs": round(_logs / 1e9, 2), "total": round((_raw + _logs) / 1e9, 1)}
 
 os.makedirs("results", exist_ok=True)
 json.dump(out, open("results/paper_numbers.json", "w"), indent=1)

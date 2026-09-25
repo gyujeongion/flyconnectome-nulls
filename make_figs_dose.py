@@ -1,5 +1,6 @@
 """Figure 9: dose-response to the sensory->motor shortcut, with a rewiring-matched sham."""
 import json, glob, os, numpy as np
+from seeds import registered  # registered grids are seeds 0-9; see seeds.py
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.right": False,
@@ -13,7 +14,7 @@ CELLS = [("0.0", "0.0", "P0T0: safe food"), ("0.2", "0.0", "P1T0: predator")]
 
 
 def runs(pv, pt):
-    return [r for r in sorted(glob.glob(f"runs/dose_P{pv}_T{pt}_s*"))
+    return [r for r in sorted(registered(glob.glob(f"runs/dose_P{pv}_T{pt}_s*")))
             if os.path.exists(f"{r}/done.flag")]
 
 

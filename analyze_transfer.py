@@ -17,6 +17,7 @@ T4  the base block reproduces the differences already reported, so T1 is not a r
     of a baseline gap
 """
 import json, glob, os, sys
+from seeds import registered  # registered grids are seeds 0-9; see seeds.py
 import numpy as np
 
 PRIMARY = ("stress_pred0.15", "transfer_toxic0.9", "transfer_plume0.12")
@@ -49,7 +50,7 @@ def read(path):
 def losses(prefix, conds, blocks):
     """seed -> cond -> mean loss over `blocks`, averaged across the two ecologies."""
     per = {}
-    for f in sorted(glob.glob(f"runs/{prefix}_P*_T0.0_s*/assay.jsonl")):
+    for f in sorted(registered(glob.glob(f"runs/{prefix}_P*_T0.0_s*/assay.jsonl"))):
         run = os.path.basename(os.path.dirname(f))
         seed = int(run.split("_s")[-1])
         b = read(f)
@@ -185,7 +186,7 @@ def main():
     out["T4"] = {}
     for nm, prefix, conds in (("dose", "dose", DOSE), ("ecofix", "ecofix", FIX)):
         base = {}
-        for f in sorted(glob.glob(f"runs/{prefix}_P*_T0.0_s*/assay.jsonl")):
+        for f in sorted(registered(glob.glob(f"runs/{prefix}_P*_T0.0_s*/assay.jsonl"))):
             seed = int(os.path.basename(os.path.dirname(f)).split("_s")[-1])
             b = read(f)
             for c in conds:
@@ -215,7 +216,7 @@ def main():
         base_gap = []
         for axis in ("toxicity", "predator"):
             per = {}
-            for f in sorted(glob.glob(f"runs/{prefix}_P*_T0.0_s*/assay.jsonl")):
+            for f in sorted(registered(glob.glob(f"runs/{prefix}_P*_T0.0_s*/assay.jsonl"))):
                 run = os.path.basename(os.path.dirname(f))
                 pv = run.split("_P")[1].split("_")[0]
                 s = int(run.split("_s")[-1])

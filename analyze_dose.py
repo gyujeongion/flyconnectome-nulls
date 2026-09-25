@@ -8,6 +8,7 @@ D3  the cost of removing olfaction increases monotonically with shortcut share
 D4  no difference between the AS steps at generation 0
 """
 import json, glob, os, sys, itertools
+from seeds import registered  # registered grids are seeds 0-9; see seeds.py
 import numpy as np
 
 CONDS = ["A", "AS1", "AS3", "AS5", "AS10"]
@@ -19,7 +20,7 @@ RNG = np.random.default_rng(12345)
 
 def runs():
     out = {}
-    for d in sorted(glob.glob("runs/dose_*")):
+    for d in sorted(registered(glob.glob("runs/dose_*"))):
         if not os.path.exists(os.path.join(d, "done.flag")):
             continue
         name = os.path.basename(d)

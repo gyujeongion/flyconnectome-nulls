@@ -1,6 +1,6 @@
 #!/bin/bash
 # PROTOCOL_SWAP.md: shortcut transplant; starts after the PROTOCOL_FIX grid
-cd "$(dirname "$0")"
+cd ~/Development/260917_fly_evolution
 until grep -q FIX_DONE fix.log; do sleep 120; done
 for s in 0 1 2 3 4 5 6 7 8 9; do
   for cfg in "0.0 0.0" "0.2 0.0"; do

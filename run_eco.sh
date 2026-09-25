@@ -1,6 +1,6 @@
 #!/bin/bash
 # paper-v2 ecology grid: seed-major order so an early stop still leaves a balanced 2x2
-cd "$(dirname "$0")"
+cd ~/Development/260917_fly_evolution
 for s in 0 1 2 3 4 5 6 7 8 9; do
   for cfg in "0.0 0.0" "0.2 0.0" "0.0 1.0" "0.2 1.0"; do
     pv=${cfg%% *}; pt=${cfg##* }

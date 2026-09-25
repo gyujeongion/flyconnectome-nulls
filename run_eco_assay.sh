@@ -1,6 +1,6 @@
 #!/bin/bash
 # cross-ecology assay on generation-500 elites; starts only after the evolution grid finishes
-cd "$(dirname "$0")"
+cd ~/Development/260917_fly_evolution
 until grep -q ECO_DONE eco.log; do sleep 120; done
 for s in 0 1 2 3 4 5 6 7 8 9; do
   for cfg in "0.0 0.0" "0.2 0.0" "0.0 1.0" "0.2 1.0"; do

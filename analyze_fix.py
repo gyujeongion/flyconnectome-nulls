@@ -1,6 +1,7 @@
 """PROTOCOL_FIX analysis: corrected turning noise + interface-preserving controls N4/N5.
 Registered inference at seed level (n=10, per ecology and averaged over ecologies)."""
 import json, glob, os, numpy as np
+from seeds import registered  # registered grids are seeds 0-9; see seeds.py
 from scipy.stats import wilcoxon
 CONDS = ["A", "N1", "N2", "N4", "N5"]
 CELLS = {("0.0", "0.0"): "P0T0", ("0.2", "0.0"): "P1T0", ("0.0", "1.0"): "P0T1", ("0.2", "1.0"): "P1T1"}
@@ -12,7 +13,7 @@ def holm(ps):
     return adj
 def ci(d):
     b = np.median(rng.choice(d, (10000, len(d))), 1); return np.percentile(b, 2.5), np.percentile(b, 97.5)
-def runs(pv, pt): return sorted(r for r in glob.glob(f"runs/ecofix_P{pv}_T{pt}_s*") if os.path.exists(f"{r}/done.flag"))
+def runs(pv, pt): return sorted(r for r in registered(glob.glob(f"runs/ecofix_P{pv}_T{pt}_s*")) if os.path.exists(f"{r}/done.flag"))
 def P(r): return [json.loads(l) for l in open(f"{r}/probe.jsonl")]
 def endp(r):
     p = P(r); g = np.array([x["gen"] for x in p], float); out = {}

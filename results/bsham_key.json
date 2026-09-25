@@ -1,0 +1,74 @@
+{
+ "decision_rules": "Boundary-targeted, shortcut-free sham (PROTOCOL_BSHAM.md).\n\nDecision rules, frozen before the data existed (2026-09-24, research log 54):\n\n  Seed value   per seed, the mean over P0T0 and P1T0; n = 10. Mean over seeds with a percentile bootstrap 90 %\n               interval (10,000 resamples, seed 12345), as in the dose analysis.\n  P (primary)  AS10 - BS10 at the last common-garden probe (generation 550):\n               SHORTCUT-SPECIFIC if the lower bound > +0.10; BOUNDARY REWIRING SUFFICES if the interval lies inside\n               +-0.10; INTERMEDIATE otherwise.\n  R (primary robustness)  the same contrast on the fresh-world evaluation of generation-599 elites; ROBUST if it\n               falls in the same category as P, otherwise both are reported and the claim is described as not robust.\n  S1  AS<k> - BS<k> increases with k (Page's L on per-seed differences, increasing), p < 0.05.\n  S2  per-ecology AS10 - BS10.  S3  BS10 - A (+-0.10 reference).  S4  olfaction-ablation cost AS10 vs BS10.\n  S5  AS10 - A, lower bound > 0.\n\nBefore any number is computed: all 20 runs finished, configurations equal apart from run, seed and pred_fixed,\nand all 80 boundary-sham constructions complete with the shortcut share unchanged and degrees kept; else exit 1.\n`--selftest` runs the decision logic on synthetic data with known effects.\n",
+ "P": {
+  "mean": 0.5995188355445862,
+  "ci90": [
+   0.4143128764629364,
+   0.7965416449308395
+  ],
+  "verdict": "SHORTCUT-SPECIFIC"
+ },
+ "R": {
+  "mean": 0.638615608215332,
+  "ci90": [
+   0.48952414527535437,
+   0.7915697892010211
+  ],
+  "verdict": "SHORTCUT-SPECIFIC",
+  "robust": true
+ },
+ "S1": {
+  "means": {
+   "1": 0.1581,
+   "3": 0.277,
+   "5": 0.3568,
+   "10": 0.5995
+  },
+  "page_L": 279.0,
+  "z": 3.1767908335299637,
+  "p": 0.0007445719741893454,
+  "supported": true
+ },
+ "S2": {
+  "P0T0": {
+   "mean": 0.5682334423065185,
+   "ci90": [
+    0.31523737668991086,
+    0.831610254049301
+   ]
+  },
+  "P1T0": {
+   "mean": 0.6308042287826539,
+   "ci90": [
+    0.4283913159370422,
+    0.8311136376857756
+   ]
+  }
+ },
+ "S3": {
+  "mean": 0.00676034688949585,
+  "ci90": [
+   -0.06970557153224945,
+   0.08599920809268949
+  ]
+ },
+ "S4": {
+  "AS10_cost": 1.1753261506557464,
+  "BS10_cost": 0.35383897423744204,
+  "diff": {
+   "mean": 0.8214871764183045,
+   "ci90": [
+    0.5625702673196793,
+    1.0787843343615529
+   ]
+  }
+ },
+ "S5": {
+  "mean": 0.6062791824340821,
+  "ci90": [
+   0.4347050178050995,
+   0.7981828868389128
+  ],
+  "replicated": true
+ }
+}
