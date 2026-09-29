@@ -2,7 +2,7 @@
 title: "Null-model treatment of the sensory-motor boundary changes an evolutionary connectome comparison"
 author: |
   Gyujeong Park\
-  Independent Researcher\
+  IonLabs\
   ORCID 0009-0006-2989-728X\
   `ionlabs2025@gmail.com`
 abstract: |
